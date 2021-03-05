@@ -1,0 +1,113 @@
+
+body{
+    color : #4b4646;
+    font-family: 'Shippori Mincho B1', serif;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.footer-text{
+    color : #4b4646;
+    font-family: 'Shippori Mincho B1', serif;
+    font-weight: bold;
+    font-size: 0.5em;
+}
+
+.link-text{
+    color : #4b4646;
+    font-family: 'Shippori Mincho B1', serif;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.page-heading {
+    font-family: 'Shippori Mincho B1', serif;
+    font-size: 3em;
+    color: #4b4646;
+    text-align:left;
+}
+
+.border {
+    border-color: darkgray;
+    border-style: solid;
+    border-spacing: 2,2;
+    padding: 1em;
+    margin: auto;
+    display:inline-block;
+}
+
+.color-pink{
+    color: #ca485e;
+}
+
+
+.adjust-line-height {
+    line-height: 2.5em;
+}
+
+.image-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.img-border {
+    border-radius: 50%;
+    border: 2px solid #555;
+}  
+
+.footer-box {
+    position: absolute;
+    bottom: 0;
+}
+
+.bottom-photo{
+      position: relative;
+      top: 300;
+      left: 200;
+}
+
+.top-photo{
+      position: absolute;
+      top: 325px;
+      left: 535px;
+}
+
+a{
+    text-decoration: none;
+    color:  #4b4646;
+}
+
+a:hover{
+    text-decoration: none;
+    color:  lightgray;
+}
+
+.row {
+    display: flex;
+}
+  
+.column {
+    flex: 33.33%;
+    padding: 1px 70px;
+}
+
+
+ul {
+    list-style: none;
+    text-align: left;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+  
+
+
+
+
+
