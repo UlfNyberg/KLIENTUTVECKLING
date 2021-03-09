@@ -1,5 +1,5 @@
 
-body{
+.body{
     color : #4b4646;
     font-family: 'Shippori Mincho B1', serif;
     font-weight: bold;
@@ -68,14 +68,13 @@ body{
 
 .bottom-photo{
       position: relative;
-      top: 300;
-      left: 200;
 }
 
 .top-photo{
-      position: absolute;
-      top: 325px;
-      left: 535px;
+    position: absolute;
+    top: 50%;
+    left: 45.5%;
+    max-width: 10%;   
 }
 
 a{
@@ -106,6 +105,13 @@ ul {
 }
 
   
+.container {
+    position: relative; 
+    left: 0; 
+    top: 0;
+}
+
+
 
 
 
