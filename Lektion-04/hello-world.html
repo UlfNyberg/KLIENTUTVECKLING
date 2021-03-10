@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript - hello World</title>
+    <script>
+        //alert("Hello from head!")
+    </script>
+</head>
+<body>
+
+<h2 id="tja!">Något kul</h2>
+
+    <script>
+        //alert("Hello World")
+
+        let w = document.getElementById('tja!');
+        w.innerHTML = 'Välkommen till JS!';
+
+        let tal1 = prompt("Ange hur många minuter du ringer för i månaden: ");
+        let tal2 = prompt("Ange din minut-taxa: ")
+        let summa = Number(tal1) * Number(tal2);
+        alert("Din måndagsavgift landar på " + summa);
+
+
+        let firstName = 'Ulf';
+        firstName.toUpperCase();
+        console.log(firstName);
+        firstName = firstName.toUpperCase();
+        console.log(firstName);
+
+        let PI = 3.14159;
+        console.log(PI.toFixed(2)); //endast 2 decimaler
+
+        let today = new Date;
+
+        let weekday = new Array(7);
+        weekday[0] = "Söndag";
+        weekday[1] = "Måndag";
+        weekday[2] = "Tisdag";
+        weekday[3] = "Onsdag";
+        weekday[4] = "Torsdag";
+        weekday[5] = "Fredag";
+        weekday[6] = "Lördag";
+
+        let month = new Array(12);
+        month[0] = "Januari";
+        month[1] = "Februari";
+        month[2] = "Mars";
+        month[3] = "April";
+        month[4] = "Maj";
+        month[5] = "Juni";
+        month[6] = "Juli";
+        month[7] = "Augusti";
+        month[8] = "September";
+        month[9] = "Oktober";
+        month[10] = "November";
+        month[11] = "December";
+
+
+    console.log(weekday[today.getDay()] + " den " + today.getDate() + " " + month[today.getMonth()] + " " + today.getFullYear());
+
+
+    </script>
+
+    <script src="hello-world.js"></script>
+</body>
+</html>
