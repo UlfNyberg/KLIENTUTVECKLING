@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inköpslista</title>
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+
+<body>
+    
+<div class="container">
+    <h2>Inköpslista</h2>
+<form id="shoppingForm">
+    Vad vill du handla idag? <br>
+    <input id="addToList" type="text">
+    <button id="clicky01" type="submit"
+    class="btn btn-outline-success">Lägg till</button>
+    <br><br>
+    <ul id="shoppingList" class="list-group">
+        <li class='list-group-item'><input id="cb-1" type="checkbox" /> Bröd</li > 
+        <li class='list-group-item'><input id="cb-2" type="checkbox" /> Mjölk</li>
+        <li class='list-group-item'><input id="cb-3" type="checkbox" /> Ost</li>
+    </ul>
+</div>    
+    
+</form>
+<br><br>
+<h1 id="coords" class="text-center text-success "></h1>
+
+    <script src="jquery-3.6.0.min.js"></script>
+
+    <script>
+    $(document).ready(function(){
+        
+        $('#shoppingForm').on('submit',function(event){
+            let text = $("#addToList").val();
+            if (text != ""){
+            $("#shoppingList").append("<li class='list-group-item'><input type='checkbox' />" + text + "</li>");
+            } else alert("Du måste skriva in något");
+            $("#addToList").val("");
+            event.preventDefault();
+        });
+
+        $('#shoppingList').on('click', 'li', function(){
+            $(this).css("text-decoration", "line-through");
+             $(this).css("background-color", "gold");
+        });
+
+        $('#shoppingList').on('dblclick', 'li', function(){
+            $(this).remove();
+            
+        });
+
+        $(document).on('mousemove', function(e){
+            $('#coords').html('Coords: Y: ' + e.clientY + " X: " + e.clientX);
+        })
+
+
+    });
+    </script>
+
+</body>
+</html>

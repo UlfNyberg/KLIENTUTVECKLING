@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello</h1>
+
+    <h4>Click</h4>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, porro!</p>
+    
+<ul>
+    <li>Hej1</li>
+    <li>Hej2</li>
+    <li>Hej3</li>
+</ul>
+
+<input id="demo" value="TEST">
+
+<h2>Formulär</h2>
+<form action="#">
+    Namn <br>
+    <input type="text"><br><br>
+    Epost <br>
+    <input type="email">
+    <input type="submit" value="Skicka">
+</form>
+
+    <script src="jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+            $("h4").click(function(){
+                $(this).hide();
+                console.log("Hej");
+            });
+
+            $("ul").before("<p>Before the lsit</p>");
+            $("ul").after("<p/>After the list</p>");
+            $("ul").prepend("<li>Start</li>");
+            $("ul").append("<li>End</li>");
+
+            $("input").focus(function(){
+                console.log("färg");
+                $(this).css("background-color", "gold");
+            })
+
+            $("input").blur(function(){
+                console.log("vit");
+                $(this).css("background-color", "white");
+            })
+
+            $("p").mouseenter(function(){
+                console.log("mouse-enter");
+                $(this).html("<p>Demo på mouse-enter</p>")
+            })
+
+
+        });
+    </script>
+</body>
+</html>
