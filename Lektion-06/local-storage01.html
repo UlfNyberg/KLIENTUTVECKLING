@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+
+</head>
+<body class="container">
+    <h1>Local Storage</h1>
+
+    <div id="table"></div>
+
+    <script>
+
+        let bookTitle = "The New York trilogy";
+        let bookAuthorFname = "Paul";
+        let bookAuthorLname = "Auster";
+
+        localStorage.clear();
+
+        localStorage.setItem("bookTitle", bookTitle);
+        localStorage.setItem("bookAuthorFirstname", bookAuthorFname);
+        localStorage.setItem("bookAuthorLastname", bookAuthorLname);
+
+        // let bookTitle = localStorage.getItem("bookTitle");
+        // let bookAuthorFname = localStorage.getItem("bookAuthorFirstname");
+        // let bookAuthorLname = localStorage.getItem("bookAuthorLastname");
+
+
+        let table = `<table class="table">
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr> `;
+
+        for(let i = 0 ; i< localStorage.length; i++){
+            let key = localStorage.key(i);
+            let value = localStorage.getItem(key);
+        
+
+        table += `
+            <tr>
+                <td>${key}</td>
+                <td>${value}</td>
+            </tr> `;
+        }
+
+        table += "</table>";
+
+        document.getElementById("table").innerHTML = table;
+
+
+
+    </script>
+    
+</body>
+</html>

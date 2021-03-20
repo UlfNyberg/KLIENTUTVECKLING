@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modernizr Test</title>
+</head>
+<body>
+    <script src="modernizr-custom.js"></script>
+    <script>
+        Modernizr.on('apng', function(result) {
+  if (result) {
+    console.log("Apng is supported")
+  } else {
+    console.error("Apng is NOT supported!");
+  }
+});
+
+if (Modernizr.arrow) {
+    console.log("Arrow is supported")
+} else {
+    console.error("Arrow is NOT supported!");
+}
+
+if (Modernizr.geolocation) {
+    console.log("Geolocation is supported")
+} else {
+    console.error("Geolocation is NOT supported!");
+}
+
+if (Modernizr.batteryapi) {
+    console.log("Battery is supported")
+} else {
+    console.error("Battery is NOT supported!");
+}
+
+if (Modernizr.fetch) {
+    console.log("Fetch is supported")
+} else {
+    console.error("Fetch is NOT supported!");
+}
+    </script>
+</body>
+</html>
