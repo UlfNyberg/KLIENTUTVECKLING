@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <link rel="stylesheet" href="css/screen.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/jquery.validate.js"></script>
+</head>
+<body>
+
+
+
+    <div class="row mt-5">
+        <div class="col">
+          <h2>Write your delivery data</h2>
+        </div>
+      </div>
+      <form id="confirmation-form" method="POST">
+        <div class="row">
+          <div class="col">
+            <label for="name-form">Name</label>
+            <input
+              id="name-form"
+              type="text"
+              class="form-control"
+              name="name"
+              minlength="3"
+              title="write your name"
+              placeholder="Your name" required
+            />
+          </div>
+          <div class="col">
+            <label for="surname-form">Surname</label>
+            <input
+              id="surname-form"
+              type="text"
+              name="surname"
+              class="form-control"
+              placeholder="Your surname" required
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="email-form">E-mail</label>
+            <input
+              id="email-form"
+              type="email"
+              name="email"
+              class="form-control"
+              placeholder="my@email.com" required
+            />
+          </div>
+          <div class="col">
+            <label for="phone-form">Telephone number</label>
+            <input
+              id="phone-form"
+              type="text"
+              name="phone"
+              class="form-control"
+              placeholder="79695843"
+            />
+          </div>
+        </div>
+
+        <label for="address-form">Address</label>
+        <input
+          id="address-form"
+          type="text"
+          name="address"
+          class="form-control"
+          placeholder="Your address"
+          required
+        />
+        <div class="row">
+          <div class="col">
+            <label for="city-form">City</label>
+            <input
+              id="city-form"
+              type="text"
+              name="city"
+              class="form-control"
+              placeholder="Your city"
+              required
+            />
+          </div>
+          <div class="col">
+            <label for="zip-form">Zip</label>
+            <input
+              id="zip-form"
+              type="text"
+              name="zip"
+              class="form-control"
+              placeholder="120 59"
+              required
+            />
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col">
+            <button id="submit" class="btn btn-primary" type="submit" value="submit">
+              Confirm and Submit
+            </button>
+          </div>
+        </div>
+      </form>
+      
+      <div
+      class="modal fade"
+      id="dialog"
+      tabindex="-1"
+      role="dialog"
+      
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="text-modal">
+             Purchase confirmed!
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">This purchase will be delivered as soon as possible</div>
+          <div class="modal-footer">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Create profile</h1>
+
+    <button id="btnLoad">Visa random</button>
+    <div id="output"></div>
+
+    $.ajax({
+        url: 'https://randomuser.me/api/',
+        dataType: 'json',
+        success: function(data) {
+          console.log(data);
+        }
+      });
+
+    <script>
+        document.getElementById("randomImage").addEventListener("click", load);
+
+        function load(){
+            fetch("https://dog.ceo/api/breeds/image/random")
+            .then((response) => response.json())
+            .then((data) => render(data.message))
+            .catch((error) => console.error(error));
+        }
+
+        function render(image){
+            console.log(image);
+            let output =`<img src="${image}" alt="Random Dog">`;
+            document.getElementById("randomImage").innerHTML = output;
+        }
+
+        
+
+    </script>
+
+
+</body>
+</html>

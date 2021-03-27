@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage Test</title>
+</head>
+
+<body>
+    <h1>Local Storage Test</h1>
+
+
+<script>
+
+    localStorage.setItem('test', 1);
+    alert(localStorage.getItem('test'));
+
+    localStorage.test = 2;
+    alert (localStorage.test);
+    delete localStorage.test;
+
+    //iterate genom keys/values med Object.keys
+    let keys = Object.keys(localStorage);
+    for(let key of keys) {
+    alert(`${key}: ${localStorage.getItem(key)}`);
+
+    const myArray = ['A','B','C','D'];
+    //med JSON.stringify sparas arrayen i rätt format
+    localStorage.setItem("myArray", JSON.stringify(myArray));
+    //JSON.parse konverterar tillbaka till en array
+    let getMyArray = JSON.parse(localStorage.getItem("myArray"));
+    console.log(getMyArray);
+}
+
+
+    </script>
+
+    
+
+
+</body>
+</html>

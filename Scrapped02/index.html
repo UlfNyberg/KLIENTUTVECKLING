@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+    <title>Shopping</title>
+</head>
+<body>
+    
+    <header>
+        <div class="overlay"></div>
+        <nav>
+            <h2><span style="color: white">SHOPPEN</span></h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li class="cart">
+                    <a href="shoppingcart.html"> <!-- ändrad, var 'cart.html'-->
+                        <ion-icon name="basket-outline"></ion-icon>Cart<span>0</span>
+                        <!-- 0 är span, i antal i varukorgen -->
+                        <!-- -->
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div id="clothes-box"></div>
+
+    <div class="sidenav"></div>   <!-- Vad är detta -->
+
+    <div>   <!-- Vad är denna diven -->
+        <h1 id="cart-title">Shopping Cart</h1> 
+        <hr>
+    </div>
+    <div id="list">
+        <ul class="list-of-items"></ul>
+    </div>
+    <div id="checkout"></div>
+
+
+
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+</html>

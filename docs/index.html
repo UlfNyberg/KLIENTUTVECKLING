@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fina Fisken</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet"> 
+    
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="navbar-center">
+        <span class="nav-icon">
+            <i class="fas fa-bars"></i>
+        </span>
+       <img src="images/FinaFiskenLogga.png" alt="Fina Fisken" width="200" height="62" />
+       <div class="cart-btn">
+           <span class="nav-icon">
+               <i class="fas fa-cart-plus"></i>
+           </span>
+           <div class="cart-items">0</div>
+       </div>
+    </div>
+</nav>
+
+<!--  hero -->
+
+<header class="hero">
+    <div class="banner"">
+        <h1 class="banner-title">Store collection</h1>
+        <button class="banner-btn">shop now</button>
+    </div>
+</header>
+
+<!--  products -->
+
+<section class="products">
+    <div class="section-title">
+        <h2>our products</h2>
+    </div>
+    <div class="products-center">
+        
+
+    </div>
+</section>
+
+<!-- cart -->
+<div class="cart-overlay">
+    <div class="cart">
+        <span class="close-cart">
+            <i class="fas fa-window-close"></i>
+        </span>
+        <h2>your cart</h2>
+        <div class="cart-content">
+            
+        </div>
+        <div class="cart-footer">
+            <h3>your total : <span class="cart-total">0</span> kr</h3>
+        <button class="clear-cart banner-btn">clear cart</button>
+        <br><br>
+
+
+
+
+        <!-- Order validation -->
+        <div class="wrapper">
+            <h2>Fill in your info</h2>
+            <div id="error_message"></div>
+            <form id="myform" onsubmit="return validate();">
+              <div class="input_field">
+                  <input type="text" placeholder="Name" id="name">
+              </div>
+              <div class="input_field">
+                  <input type="text" placeholder="Address" id="subject">
+              </div>
+              <div class="input_field">
+                  <input type="text" placeholder="Phone" id="phone">
+              </div>
+              <div class="input_field">
+                  <input type="text" placeholder="E-mail" id="email">
+              </div>
+              <div class="btn"><input type="submit" value="PLACE ORDER">
+                  
+              </div>
+            </form>
+          </div>
+
+        
+
+        </div>
+
+
+        </div>
+    </div>
+
+
+          
+    </body>
+    </html>
+
+    </div>
+</div>
+
+
+<script src="script.js"></script>
+
+    
+</body>
+</html>
