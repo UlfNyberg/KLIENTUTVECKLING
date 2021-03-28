@@ -18,7 +18,7 @@ let buttonsDOM = [];
 
 //class with constructor, getting the product from JSON
 //asyncrinous code with async
-// when result is done, using data we get it in JSON-format
+//when result is done, using data we get it in JSON-format
 class Products {
     async getProducts(){
         try {
@@ -43,7 +43,6 @@ class Products {
 
 //class responsible for cart and display products with dynamic values
 // loops through array, adds to result
-// <h5>${product.description}</h5>  ska in här efter .title
 class UI {
     displayProducts(products){
     let result = "";
@@ -199,8 +198,8 @@ class UI {
                         Storage.saveCart(cart);
                         this.setCartValues(cart);
                         lowerAmount.previousElementSibling.innerText = tempItem.amount
-                    } else {
-                        cartContent.removeChild(lowerAmount.parentElement);
+                    }  else {
+                        cartContent.removeChild(lowerAmount.parentElement.parentElement);
                         this.removeItem(id);
                     }
 
@@ -260,7 +259,7 @@ const products = new Products();
 //set up application
 ui.setUpAPP();
 
-  //get all products using AJAX to chain, example calling getBagbuttons 
+  //get all products using AJAX to chain, for example calling getBagbuttons 
   // after products are loaded
  products.getProducts().then(products => { 
      ui.displayProducts(products);
@@ -271,7 +270,7 @@ ui.cartLogic();
  })
 });
 
-
+//validation of the users input, returns true if all fields are ok
 function validate(){
     var name = document.getElementById("name").value;
     var subject = document.getElementById("subject").value;
